@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text to Speech Web App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/responsive-voice/1.5.2/responsivevoice.min.js"></script>
+</head>
+<body>
+  <h1>Text to Speech Web App</h1>
+  <textarea id="text-input" placeholder="Enter text here..."></textarea>
+  <button id="speak-button">Speak</button>
+  <script>
+    $(document).ready(function() {
+      $("#speak-button").click(function() {
+        var text = $("#text-input").val();
+        responsiveVoice.speak(text);
+      });
+    });
+  </script>
+</body>
+</html>
+```
