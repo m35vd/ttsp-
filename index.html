@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Text-to-Speech App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Text-to-Speech</h1>
+      <form id="form">
+        <label for="text">Enter Text:</label>
+        <textarea id="text" name="text" rows="10" required></textarea>
+
+        <label for="language">Language:</label>
+        <select id="language" name="language">
+          <option value="en" selected>English</option>
+          <option value="ar">Arabic</option>
+          <option value="fr">French</option>
+        </select>
+
+        <label for="voice">Voice:</label>
+        <select id="voice" name="voice">
+          <option value="male" selected>Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <label for="speed">Speed:</label>
+        <input type="range" id="speed" name="speed" min="0.5" max="2" value="1" step="0.1" />
+
+        <button type="submit">Speak</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="download">Download</button>
+      </form>
+    </div>
+    <div class="output-container">
+      <p id="output"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
